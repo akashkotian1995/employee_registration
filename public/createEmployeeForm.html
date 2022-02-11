@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,
+		initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container mt-3">
+        <br />
+        <h1>Contact Us</h1>
+        <br />
+        <form action="/formFillUp" class="needs-validation" method="POST" novalidate>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName" style="font-size: 23px">
+                        Name
+                    </label>
+                    <span style="color: red;">*</span>
+                    <input type="text" class="form-control" id="name" name="name" required />
+                    <div class="invalid-feedback">Please enter name.</div>
+                </div>
+
+                <div class="form-group  col-md-6">
+                    <label for="age" style="font-size: 23px">
+                        Age
+                    </label>
+                    <span style="color: red;">*</span>
+                    <input type="text" class="form-control" id="age" name="age" required />
+                    <div class="invalid-feedback">Please enter age.</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dateOfBirth" style="font-size: 23px">
+                        Data of birth
+                    </label>
+                    <span style="color: red;">*</span>
+                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required />
+                    <div class="invalid-feedback">Please enter date of birth.</div>
+                </div>
+                <div class="form-group  col-md-6">
+                    <label for="bloodGroup" style="font-size: 23px">Blood group
+                    </label>
+                    <span style="color: red;">*</span>
+                    <input type="text" class="form-control" id="bloodGroup" name="bloodGroup" required />
+                    <div class="invalid-feedback">Please enter blood group.</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="designation" style="font-size: 23px">Designation
+                    </label>
+                    <span style="color: red;">*</span>
+                    <input type="text" class="form-control" id="designation" name="designation" required />
+                    <div class="invalid-feedback">Please enter designation.</div>
+                </div>
+                <div class="form-group required col-md-6">
+                    <label for="skills" style="font-size: 23px">Skills
+                    </label>
+                    <span style="color: red;">*</span>
+                    <input type="text" class="form-control" id="skills" name="skills" required />
+                    <div class="invalid-feedback">Please enter skills.</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Submit
+            </button>
+        </form>
+        <script>
+            // Self-executing function
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
